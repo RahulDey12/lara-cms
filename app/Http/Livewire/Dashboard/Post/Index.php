@@ -12,6 +12,8 @@ class Index extends Component
     public $posts;
     public $search;
 
+    protected $listeners = ['postDelete'];
+
     public function mount()
     {
         $this->posts = Auth::user()->posts;
@@ -25,5 +27,12 @@ class Index extends Component
     public function render()
     {
         return view('livewire.dashboard.post.index')->extends('layouts.dashboard');
+    }
+
+    public function postDelete(Post $post)
+    {
+        $post->delete();
+
+        $this->posts = $this->posts->filter(fn ($single_post, $key) => $single_post->id != $post->id );
     }
 }

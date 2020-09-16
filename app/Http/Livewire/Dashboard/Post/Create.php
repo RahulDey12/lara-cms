@@ -55,10 +55,11 @@ class Create extends Component
             'title' => $this->title,
             'body'  => $this->body,
             'visibility' => $this->visibility,
+            'photo' => is_null($this->photo) ? null : $this->photo->store('public/post-images'),
             'user_id'    => Auth::user()->id,
         ]);
 
-        return $this->redirect(route('home'));
+        return $this->redirect(route('dashboard.post.index'));
     }
 
     public function editorUpdated($data) 
