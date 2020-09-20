@@ -1,4 +1,4 @@
-@section('title', 'Reset password')
+<x-slot name="title">Reset password</x-slot>
 
 <div>
     <div class="sm:mx-auto sm:w-full sm:max-w-md">

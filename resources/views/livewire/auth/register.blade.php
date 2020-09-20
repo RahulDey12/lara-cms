@@ -1,4 +1,4 @@
-@section('title', 'Create a new account')
+<x-slot name="title">Create a new account</x-slot>
 
 <div>
     <div class="sm:mx-auto sm:w-full sm:max-w-md">

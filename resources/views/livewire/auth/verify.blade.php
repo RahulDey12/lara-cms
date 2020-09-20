@@ -1,4 +1,4 @@
-@section('title', 'Verify your email address')
+<x-slot name="title">Verify your email address</x-slot>
 
 <div>
     <div class="sm:mx-auto sm:w-full sm:max-w-md">

@@ -1,4 +1,4 @@
-@section('title', 'All Posts')
+<x-slot name="title">All Posts</x-slot>
 
 <div class="-mx-3">
     <div class=" w-full flex justify-between items-center mb-3">
@@ -21,7 +21,7 @@
                 <tr>
                     <th class="px-4 py-3">Title</th>
                     <th class="px-4 py-3">Author</th>
-                    <th class="px-4 py-3">Date</th>
+                    <th class="px-4 py-3">Create At</th>
                     <th class="px-4 py-3">Actions</th>
                 </tr>
             </thead>
@@ -32,9 +32,6 @@
                         <td class="px-5 py-4 text-lg text-cool-gray-700 border-b">
                             <div class="inline-flex items-center">
                                 {{ $post->user->name }}
-                                <svg xmlns="http://www.w3.org/2000/svg" class=" w-5 h-5 ml-2 text-blue-500" viewBox="0 0 20 20" fill="currentColor">
-                                    <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                                </svg>
                             </div>
                         </td>
                         <td class="px-5 py-4 text-lg text-cool-gray-700 border-b">{{ $post->created_at->format('d/m/Y') }}</td>

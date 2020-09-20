@@ -39,7 +39,7 @@ class Create extends Component
 
     public function render()
     {
-        return view('livewire.dashboard.post.create')->extends('layouts.dashboard');
+        return view('livewire.dashboard.post.create')->layout('layouts.dashboard');
     }
 
     public function publish() 

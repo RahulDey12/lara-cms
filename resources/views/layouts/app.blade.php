@@ -1,5 +1,7 @@
-@extends('layouts.base')
+<x-layouts.base>
+    @isset($title)
+        <x-slot name="title">{{ $title }}</x-slot>
+    @endisset
 
-@section('body')
-    @yield('content')
-@endsection
+    {{ $slot }}
+</x-layouts.base>

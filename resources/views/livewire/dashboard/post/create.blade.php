@@ -1,4 +1,4 @@
-@section('title', 'Add New Post')
+<x-slot name="title">Add New Post</x-slot>
 
 <div class=" flex flex-row -mx-3">
     <div class="w-4/5 px-3">

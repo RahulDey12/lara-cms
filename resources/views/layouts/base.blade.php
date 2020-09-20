@@ -3,12 +3,11 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        @hasSection('title')
-
-            <title>@yield('title') - {{ config('app.name') }}</title>
+        @isset($title)
+            <title>{{ $title }} - {{ config('app.name') }}</title>
         @else
             <title>{{ config('app.name') }}</title>
-        @endif
+        @endisset
 		
         <!-- Favicon -->
 		<link rel="shortcut icon" href="{{ url(asset('favicon.ico')) }}">
@@ -27,7 +26,7 @@
     </head>
 
     <body>
-        @yield('body')
+        {{ $slot }}
 
         <script src="{{ url(mix('js/app.js')) }}"></script>
         @livewireScripts

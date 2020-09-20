@@ -26,7 +26,7 @@ class Index extends Component
 
     public function render()
     {
-        return view('livewire.dashboard.post.index')->extends('layouts.dashboard');
+        return view('livewire.dashboard.post.index')->layout('layouts.dashboard');
     }
 
     public function postDelete(Post $post)
